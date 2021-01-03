@@ -1,0 +1,40 @@
+<html>
+<title>Predicting Score for Reddit post </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+.jumbotron {
+		background-image: url("https://images.wallpaperscraft.com/image/airplane_sky_flight_127449_1600x1200.jpg");
+		background-size:cover;
+    color: #fff;
+    padding: 90px 25px;
+}
+.container-fluid {
+    padding: 10px 400px;
+}
+</style>
+
+<body>
+  <div class="jumbotron text-center">
+    <h1>Prediting Score for Reddit Post</h1>
+  
+
+<div class="container-fluid">
+  <h5>Enter URL:</h5>
+
+  <form action="{{ url_for('predict') }}" method="post">
+
+        <input type="text" class="form-control" id="url" name="url">
+        <br>
+  	<center><button type="submit" class="btn btn-primary">Predict</button></center>
+	</form>
+	<hr>
+	<center><h4> {{ score }} </h4></center>
+</div>
+<h1> Prateek Sahu </h1>
+</div>
+
+</body>
+</html>
